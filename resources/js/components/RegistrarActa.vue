@@ -42,14 +42,14 @@
               </div>
               <div class="card-body">
                     <div class="form-group row">
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">NRO. ACTA:</label>
                         <input type="text" v-model="nroActa" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.nroActa.$error, 'is-valid':!$v.nroActa.$invalid }">
                         <div class="invalid-feedback">
                                     <span v-if="!$v.nroActa.required">Este campo es Requerido</span>
                                 </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">CODIGO:</label>
                         <select class="form-control" v-model="codigo" :class="{ 'is-invalid' : $v.codigo.$error, 'is-valid':!$v.codigo.$invalid }">
                           <option value="p.per_nombre">ALFA</option>
@@ -62,7 +62,7 @@
                                     <span v-if="!$v.codigo.required">Este campo es Requerido</span>
                                 </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">FUERZA DE TAREA:</label>
                         <select class="form-control" v-model="fzaTarea" :class="{ 'is-invalid' : $v.fzaTarea.$error, 'is-valid':!$v.fzaTarea.$invalid }">
                           <option value="p.per_nombre">ALFA</option>
@@ -74,16 +74,16 @@
                         <div class="invalid-feedback">
                                     <span v-if="!$v.fzaTarea.required">Este campo es Requerido</span>
                                 </div>
-                      </div> 
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-4">
+                      </div>
+                      <div class="col-md-3">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">CMDO:</label>
                         <input type="text" v-model="comando" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.comando.$error, 'is-valid':!$v.comando.$invalid }">
                         <div class="invalid-feedback">
                                     <span v-if="!$v.comando.required">Este campo es Requerido</span>
                                 </div>
                       </div>
+                    </div>
+                    <div class="form-group row">
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">GRUPO DE TAREA:</label>
                         <input type="text" v-model="grupoTarea" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.grupoTarea.$error, 'is-valid':!$v.grupoTarea.$invalid }">
@@ -95,11 +95,9 @@
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">GRI:</label>
                         <input type="text" v-model="gri" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.gri.$error, 'is-valid':!$v.gri.$invalid }">
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.gri.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.gri.required">Este campo es Requerido</span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">TIPO:</label>
                         <select class="form-control" v-model="tipo" :class="{ 'is-invalid' : $v.tipo.$error, 'is-valid':!$v.tipo.$invalid }">
@@ -108,9 +106,11 @@
                           <option value="p.per_materno">PESADO</option>
                         </select>
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.tipo.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.tipo.required">Este campo es Requerido</span>
+                        </div>
                       </div>
+                    </div>
+                    <div class="form-group row">
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">MARCA:</label>
                         <select class="form-control" v-model="marca" :class="{ 'is-invalid' : $v.marca.$error, 'is-valid':!$v.marca.$invalid }">
@@ -119,25 +119,25 @@
                           <option value="p.per_materno">FOTTON</option>
                         </select>
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.marca.required">Este campo es Requerido</span>
-                                </div>                      
+                            <span v-if="!$v.marca.required">Este campo es Requerido</span>
+                        </div>                      
                       </div>
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">MODELO:</label>
                         <input type="text" v-model="modelo" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.modelo.$error, 'is-valid':!$v.modelo.$invalid }">
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.modelo.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.modelo.required">Este campo es Requerido</span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">PLACA:</label>
                         <input type="text" v-model="placa" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.placa.$error, 'is-valid':!$v.placa.$invalid }">
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.placa.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.placa.required">Este campo es Requerido</span>
+                        </div>
                       </div>
+                    </div>
+                    <div class="form-group row">
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">COLOR 1:</label>
                         <input type="text" v-model="color1" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.color1.$error, 'is-valid':!$v.color1.$invalid }">
@@ -149,8 +149,15 @@
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">COLOR 2:</label>
                         <input type="text" v-model="color2" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.color2.$error, 'is-valid':!$v.color2.$invalid }">
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.color2.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.color2.required">Este campo es Requerido</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">FECHA:</label>
+                        <input type="date" v-model="fecha" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.fecha.$error, 'is-valid':!$v.fecha.$invalid }">
+                        <div class="invalid-feedback">
+                            <span v-if="!$v.fecha.required">Este campo es Requerido</span>
+                        </div>
                       </div>
                     </div>
                     <div class="form-group row">
@@ -161,8 +168,19 @@
                           <option value="p.per_paterno">SIN MERCADERIA</option>
                         </select>
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.tipoMercancia.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.tipoMercancia.required">Este campo es Requerido</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">ADUANA NACIONAL:</label>
+                        <select class="form-control" v-model="aduana" :class="{ 'is-invalid' : $v.aduana.$error, 'is-valid':!$v.aduana.$invalid }">
+                          <option value="p.per_nombre">LA PAZ</option>
+                          <option value="p.per_paterno">PASTO GRANDE</option>
+                          <option value="p.per_paterno">BERMEJO</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            <span v-if="!$v.aduana.required">Este campo es Requerido</span>
+                        </div>
                       </div>
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">LUGAR:</label>
@@ -175,39 +193,38 @@
                                     <span v-if="!$v.lugar.required">Este campo es Requerido</span>
                                 </div>
                       </div>
-                      <div class="col-md-4">
-                        <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">FECHA:</label>
-                        <input type="date" v-model="fecha" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.fecha.$error, 'is-valid':!$v.fecha.$invalid }">
-                        <div class="invalid-feedback">
-                                    <span v-if="!$v.fecha.required">Este campo es Requerido</span>
-                                </div>
-                      </div>
+                      
                     </div>
                     <div class="form-group row">
-                      <div class="col-md-4">
-                        <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">ADUANA NACIONAL:</label>
-                        <select class="form-control" v-model="aduana" :class="{ 'is-invalid' : $v.aduana.$error, 'is-valid':!$v.aduana.$invalid }">
-                          <option value="p.per_nombre">LA PAZ</option>
-                          <option value="p.per_paterno">PASTO GRANDE</option>
-                          <option value="p.per_paterno">BERMEJO</option>
-                        </select>
-                        <div class="invalid-feedback">
-                                    <span v-if="!$v.aduana.required">Este campo es Requerido</span>
-                                </div>
-                      </div>
                       <div class="col-md-4">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">CONCILACION:</label>
                         <input type="text" v-model="concilacion" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.concilacion.$error, 'is-valid':!$v.concilacion.$invalid }">
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.concilacion.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.concilacion.required">Este campo es Requerido</span>
+                        </div>
                       </div>
                       <div class="col-md-4">
+                        <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">CANTIDAD:</label>
+                        <input type="text" v-model="cantidad" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.cantidad.$error, 'is-valid':!$v.cantidad.$invalid }">
+                        <div class="invalid-feedback">
+                            <span v-if="!$v.cantidad.required">Este campo es Requerido</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">MERCANCIA:</label>
+                        <input type="text" v-model="mercancia" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.mercancia.$error, 'is-valid':!$v.mercancia.$invalid }">
+                        <div class="invalid-feedback">
+                            <span v-if="!$v.mercancia.required">Este campo es Requerido</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-md-12">
                         <label class="form-control-label col-md-12" for="text-input" style="text-align:left; font-weight:bold;">DETALLE MERCANCIA:</label>
                         <input type="text" v-model="detalleMercancia" class="form-control" style="text-transform:uppercase" :class="{ 'is-invalid' : $v.detalleMercancia.$error, 'is-valid':!$v.detalleMercancia.$invalid }">
                         <div class="invalid-feedback">
-                                    <span v-if="!$v.detalleMercancia.required">Este campo es Requerido</span>
-                                </div>
+                            <span v-if="!$v.detalleMercancia.required">Este campo es Requerido</span>
+                        </div>
                       </div>
                     </div>
                     <div class="form-group row">
@@ -264,6 +281,8 @@ export default {
       aduana : '',
       concilacion : '',
       detalleMercancia : '',
+      cantidad : '',
+      mercancia : '',
 
 
 
@@ -304,8 +323,10 @@ export default {
             aduana : { required },
             concilacion : { required },
             detalleMercancia : { required },
+            cantidad : { required },
+            mercancia : { required },
            
-            validationGroupReg: ['nroActa', 'codigo', 'fzaTarea', 'comando','grupoTarea','gri','tipo','marca','modelo','placa','color1','color2','tipoMercancia','lugar','fecha','aduana','concilacion','detalleMercancia'],
+            validationGroupReg: ['nroActa', 'codigo', 'fzaTarea', 'comando','grupoTarea','gri','tipo','marca','modelo','placa','color1','color2','tipoMercancia','lugar','fecha','aduana','concilacion','detalleMercancia','cantidad'],
             validationGroupEdit: ['perdest_nro_docA', 'perdest_tipo_docA', 'perdest_fechadestinoA', 'perdest_gradoA', 'perdest_destn1_codigoA', 'perdest_destn2_codigoA', 'perdest_destn3_codigoA', 'perdest_destn4_codigoA','perdest_cargo1A']
 
     },
@@ -398,7 +419,8 @@ export default {
                         fecha : me.fecha,
                         aduana : me.aduana,
                         concilacion : me.concilacion,
-                        detalleMercancia : me.detalleMercancia
+                        detalleMercancia : me.detalleMercancia,
+                        cantidad : me.cantidad
                         // perdest_observaciones : me.perdest_observaciones.toUpperCase(),
                     })
                     .then(function (response) {

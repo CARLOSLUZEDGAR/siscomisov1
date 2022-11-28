@@ -13,6 +13,7 @@ class LugarDeComisoController extends Controller
         $lugardecomiso = DB::table('lugar_decomisos')
                         ->join('aduanas','aduanas.id','lugar_decomisos.id_aduana')
                         ->select('lugar_decomisos.id',
+                                'aduanas.id as idAduana',
                                 'aduanas.descripcion as nomAduana',
                                 'lugar_decomisos.descripcion as nomLugar',
                                 'lugar_decomisos.observacion',

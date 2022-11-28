@@ -109,6 +109,12 @@
                         <p>Lugar de Comiso</p>
                       </router-link>
                     </li>
+                    <li class="nav-item">
+                      <router-link class="nav-link" to='/mercaderia'>
+                      &nbsp;&nbsp;<i class="fas fa-luggage-cart"></i>&nbsp;&nbsp;&nbsp;
+                        <p>Mercaderia</p>
+                      </router-link>
+                    </li>
                     @endcan
                   </ul>
                 </li> 

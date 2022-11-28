@@ -86,7 +86,7 @@
                                 <td class="text-center">{{p.ci}}</td>
                                 <td class="text-center">{{p.cm}}</td> -->
                                 <td style="width:100px; text-align:center">
-                                  <button type="button" class="btn btn-success btn-sm" @click="EnvioDatos(p.id)">
+                                  <button type="button" class="btn btn-success btn-sm" @click="ModalEditar(p)">
                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                   </button> &nbsp;
                                 </td>
@@ -253,11 +253,12 @@ import { required, minLength, maxLength, alpha, numeric, email, sameAs} from "vu
 export default {
   data() {
     return {
+      idLugar : '',
       aduana : '',
       lugar : '',
       observacion : '',
 
-      aduanaE : '',
+      aduanaE : [],
       lugarE : '',
       observacionE : '',
 
@@ -443,14 +444,16 @@ export default {
         }
       },
 
-      ModalEditar(aduana){
+      ModalEditar(lugar){
         //   this.$v.$reset(),
             //PONER DE CERO EL MODAL ANTES DE REGISTRAR
-            this.idAduana = aduana.id,
-            this.aduanaE = aduana.descripcion,
-            this.observacionE = aduana.observacion,
+
+            this.idLugar = lugar.id,
+            this.aduanaE = lugar.idAduana,
+            this.lugarE = lugar.nomLugar,
+            this.observacionE = lugar.observacion,
             //FIN PONER A CERO MODAL
-            $('#EditarPuestoAduanero').modal('show');
+            $('#EditarLugarDecomiso').modal('show');
             $(".modal-header").css("background-color", "#007bff");
             $(".modal-header").css("color", "white" );
             $(".modal-title-registro").text("Editar Puesto Aduanero");
